@@ -1,5 +1,9 @@
-﻿using Autofac;
+﻿using AppCore.IServices;
+using AppCore.Services;
+using Autofac;
+using Domain.Interfaces;
 using ProyectoFinal.Forms;
+using Repository.LogicaApp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +22,14 @@ namespace ProyectoFinal
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<Class1>().As<>();
+            builder.RegisterType<GastoServices>().As<IGastosServices>();
+            builder.RegisterType<IngresoServices>().As<IIngresosServices>();
+
+            builder.RegisterType<SaldoServices>().As<ISaldoServices>();
+            builder.RegisterType<GastoRepository>().As<IGastos>();
+
+            builder.RegisterType<IngresoRepository>().As<IIngresos>();
+            builder.RegisterType<SaldoRepository>().As<ISaldo>();
 
             var container = builder.Build();
 

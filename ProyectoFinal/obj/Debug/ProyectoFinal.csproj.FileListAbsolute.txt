@@ -17,3 +17,16 @@ C:\Users\Paulo Mayorga\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\Proyec
 C:\Users\Paulo Mayorga\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmLogin.resources
 C:\Users\Paulo Mayorga\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmReportes.resources
 C:\Users\Paulo Mayorga\source\repos\ProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmSaldos.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.AssemblyReference.cache
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmDashBoard.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmGastos.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmIngresos.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmLogin.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmPresentation.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmReportes.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmSaldos.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Properties.Resources.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.GenerateResource.cache
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CoreCompileInputs.cache
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.exe
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.pdb

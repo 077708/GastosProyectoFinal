@@ -174,5 +174,19 @@
   <ItemGroup>
     <Folder Include="UserControls\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppCore\AppCore.csproj">
+      <Project>{439C64B2-5C95-428E-B1F4-1300AC05391B}</Project>
+      <Name>AppCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{E0CD698E-060D-4EF0-B5EA-5340974CC78A}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{A374DCBC-9871-44A6-A0C2-001B1FD89CFC}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

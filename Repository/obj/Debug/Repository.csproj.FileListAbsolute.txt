@@ -1,0 +1,2 @@
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache

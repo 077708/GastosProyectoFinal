@@ -1,4 +1,5 @@
-﻿using ProyectoFinal.Forms;
+﻿using Autofac;
+using ProyectoFinal.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,13 @@ namespace ProyectoFinal
         [STAThread]
         static void Main()
         {
+            var builder = new ContainerBuilder();
+
+            builder.RegisterType<Class1>().As<>();
+
+            var container = builder.Build();
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmPresentation());

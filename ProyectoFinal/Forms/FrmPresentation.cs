@@ -48,21 +48,6 @@ namespace ProyectoFinal.Forms
             }
         }
 
-        private OpenFileDialog fd = new OpenFileDialog();
-
-        private void CargarImagen(PictureBox pictureBox)
-        {
-            //Establecer la propiedad de WaitOnLoad a true significa que la imagen
-            //se carga de forma sincrónica
-            pictureBox.WaitOnLoad = true;
-            fd.Filter = "Imagenes|*.jpg;*.gif;*.png;*.bmp";
-            fd.ShowDialog();
-            if (fd.FileName != string.Empty)
-            {
-                pictureBox.ImageLocation = fd.FileName;
-            }
-        }
-
         private void rjCircularPictureBox1_Click(object sender, EventArgs e)
         {
             CargarImagen(rjCircularPictureBox1);
@@ -128,6 +113,27 @@ namespace ProyectoFinal.Forms
         {
             FrmReportes frmReportes = new FrmReportes();
             AbrirFormEnPanel(frmReportes);
+        }
+
+        public byte[] ImageToByte(Image img)
+        {
+            var converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
+        }
+
+        private OpenFileDialog fd = new OpenFileDialog();
+
+        private void CargarImagen(PictureBox pictureBox)
+        {
+            //Establecer la propiedad de WaitOnLoad a true significa que la imagen
+            //se carga de forma sincrónica
+            pictureBox.WaitOnLoad = true;
+            fd.Filter = "Imagenes|*.jpg;*.gif;*.png;*.bmp";
+            fd.ShowDialog();
+            if (fd.FileName != string.Empty)
+            {
+                pictureBox.ImageLocation = fd.FileName;
+            }
         }
     }
 }

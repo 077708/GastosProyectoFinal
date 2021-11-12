@@ -10,10 +10,10 @@ namespace Domain.Interfaces
     {
         bool Add(T t);
 
-        bool Delete(T t);
-
         bool Update(T t);
 
         List<T> FindAll();
+
+        bool Delete(T t);
     }
 }

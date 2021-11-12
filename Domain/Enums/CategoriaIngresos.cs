@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Enums
 {
-    public class CategoriaIngresos
+    public enum CategoriaIngresos
     {
-
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AppCore.IServices;
 using Domain.Entities;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,16 @@ namespace AppCore.Services
 {
     public class GastoServices : IGastosServices
     {
+        private IGastos gastos;
+
+        public GastoServices(IGastos gastos)
+        {
+            this.gastos = gastos;
+        }
+
         public bool Add(Gastos t)
         {
-            throw new NotImplementedException();
+            return gastos.Add(t);
         }
 
         public bool Delete(Gastos t)
@@ -22,7 +30,7 @@ namespace AppCore.Services
 
         public List<Gastos> FindAll()
         {
-            throw new NotImplementedException();
+            return gastos.FindAll();
         }
 
         public bool Update(Gastos t)

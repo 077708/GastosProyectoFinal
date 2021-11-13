@@ -59,4 +59,9 @@ C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Repository.dll.config
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\LogicaApp\BossDB.db
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Data.SQLite.dll
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Data.SQLite.xml
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\LogicaApp\sqlite.interop.dll

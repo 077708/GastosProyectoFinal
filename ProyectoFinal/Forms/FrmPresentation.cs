@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCore.IServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,11 @@ namespace ProyectoFinal.Forms
 {
     public partial class FrmPresentation : Form
     {
-        public FrmPresentation()
+        private IGastosServices gastosServices;
+
+        public FrmPresentation(IGastosServices gastosServices)
         {
+            this.gastosServices = gastosServices;
             InitializeComponent();
         }
 
@@ -98,7 +102,7 @@ namespace ProyectoFinal.Forms
 
         private void btnGastos_Click(object sender, EventArgs e)
         {
-            FrmGastos frmGastos = new FrmGastos();
+            FrmGastos frmGastos = new FrmGastos(this.gastosServices);
 
             AbrirFormEnPanel(frmGastos);
         }

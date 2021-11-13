@@ -3,3 +3,4 @@ C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Domain\bin\Debug\Domain.
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Domain\obj\Debug\Domain.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Domain\obj\Debug\Domain.pdb
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Domain\obj\Debug\Domain.csproj.AssemblyReference.cache

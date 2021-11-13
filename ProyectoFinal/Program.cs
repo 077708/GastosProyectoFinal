@@ -36,7 +36,7 @@ namespace ProyectoFinal
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPresentation());
+            Application.Run(new FrmPresentation(container.Resolve<IGastosServices>()));
         }
     }
 }

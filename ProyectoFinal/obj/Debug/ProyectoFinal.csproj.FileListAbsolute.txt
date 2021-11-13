@@ -38,7 +38,6 @@ C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Domain.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Guna.UI2.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Repository.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\RJCodeAdvance.RJControls.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Buffers.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Diagnostics.DiagnosticSource.dll
@@ -49,7 +48,6 @@ C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\WindowsFormsCalendar.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\AppCore.pdb
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Domain.pdb
-C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Repository.pdb
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Autofac.pdb
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Autofac.xml
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
@@ -59,9 +57,12 @@ C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Repository.dll.config
-C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\LogicaApp\BossDB.db
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Data.SQLite.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Data.SQLite.xml
-C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
-C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\LogicaApp\sqlite.interop.dll
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Logica\BossDB.db
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.dll
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.xml
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.xml

@@ -7,24 +7,22 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Configuration;
 
-
-namespace Repository.LogicaApp
+namespace ProyectoFinal.Logica
 {
-    public class GastoRepository : IGastos
+    public class GastoR :ConexionDB, IGastos
     {
         public bool Add(Gastos t)
         {
             bool respuesta = true;
 
-            using (SQLiteConnection conexion = new SQLiteConnection(Conexion.cadena))
+            using (SQLiteConnection conexion = new SQLiteConnection(ConexionDB.cadena))
             {
                 //Abrimos conexion
                 conexion.Open();
                 //Hacemos una consulta de insert a la tabla personas
-                string query = "insert into TBGastos(Name, Description, Fecha, Gasto, Categoria, Image) " +
-                            " values (@name, @description, @fecha, @gasto, @categoria, @image)";
+                string query = "insert into TBGastos(Name, Description, Fecha, Gasto, Categoria) " +
+                            " values (@name, @description, @fecha, @gasto, @categoria)";
 
                 //Luego de eso tenemos que agregarle datos con sqliteCOmmand
                 //Este recibe una consulta y una conexion
@@ -32,10 +30,9 @@ namespace Repository.LogicaApp
 
                 cmd.Parameters.Add(new SQLiteParameter("@name", t.Name));
                 cmd.Parameters.Add(new SQLiteParameter("@description", t.Description));
-                cmd.Parameters.Add(new SQLiteParameter("@fecha", t.Date));
+                cmd.Parameters.Add(new SQLiteParameter("@fecha", t.Date.ToString()));
                 cmd.Parameters.Add(new SQLiteParameter("@gasto", t.Expenditure));
                 cmd.Parameters.Add(new SQLiteParameter("@categoria", t.CategoryExpense));
-                cmd.Parameters.Add(new SQLiteParameter("@image", t.Imagen));
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -57,12 +54,12 @@ namespace Repository.LogicaApp
         {
             List<Gastos> gastos = new List<Gastos>();
 
-            using (SQLiteConnection conexion = new SQLiteConnection(Conexion.cadena))
+            using (SQLiteConnection conexion = new SQLiteConnection(ConexionDB.cadena))
             {
                 //Abrimos conexion
                 conexion.Open();
                 //Hacemos una consulta de insert a la tabla personas
-                string query = "select * from People";
+                string query = "select * from TBGastos";
 
                 //Luego de eso tenemos que agregarle datos con sqliteCOmmand
                 //Este recibe una consulta y una conexion
@@ -78,10 +75,9 @@ namespace Repository.LogicaApp
                             Id = int.Parse(dr["Id"].ToString()),
                             Name = dr["Name"].ToString(),
                             Description = dr["Description"].ToString(),
-                            Date = (DateTime)dr["Fecha"],
+                            Date = DateTime.Now,
                             Expenditure = decimal.Parse(dr["Gasto"].ToString()),
-                            CategoryExpense = (CategoriaGastos)dr["Categoria"],
-                            Imagen = (byte[])dr["Image"],
+                            CategoryExpense = (CategoriaGastos)CategoriaGastos.Colegio,
                         });
                     }
                 }

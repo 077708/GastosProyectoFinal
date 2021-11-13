@@ -6,3 +6,4 @@ C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\AppCore\bin\Debug\Domain
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\AppCore\bin\Debug\Domain.pdb
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\AppCore\obj\Debug\AppCore.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\AppCore\obj\Debug\AppCore.pdb
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\AppCore\obj\Debug\AppCore.csproj.CopyComplete

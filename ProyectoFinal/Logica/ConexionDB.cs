@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repository.LogicaApp
+namespace ProyectoFinal.Logica
 {
-    public class Conexion
+    public class ConexionDB
     {
         public static string cadena = ConfigurationManager.ConnectionStrings["cadena"].ToString();
     }

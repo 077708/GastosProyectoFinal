@@ -51,7 +51,7 @@ namespace ProyectoFinal.Forms
                 Description = txtDescription.Text,
                 Date = DtDate.Value,
                 Expenditure = decimal.Parse(txtGasto.Text),
-                Imagen = ImageToByte(btnImage.Image),
+                //Imagen = ImageToByte(btnImage.Image),
                 CategoryExpense = (CategoriaGastos)cmbCategoria.SelectedItem,
             };
 
@@ -68,6 +68,7 @@ namespace ProyectoFinal.Forms
         private void FrmGastos_Load(object sender, EventArgs e)
         {
             cmbCategoria.Items.AddRange(Enum.GetValues(typeof(CategoriaGastos)).Cast<object>().ToArray());
+            dtgvData.DataSource = gastosServices.FindAll();
         }
     }
 }

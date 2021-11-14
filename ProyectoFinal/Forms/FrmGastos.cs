@@ -45,18 +45,26 @@ namespace ProyectoFinal.Forms
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Gastos g = new Gastos()
+            try
             {
-                Name = txtName.Text,
-                Description = txtDescription.Text,
-                Date = DtDate.Value,
-                Expenditure = decimal.Parse(txtGasto.Text),
-                //Imagen = ImageToByte(btnImage.Image),
-                CategoryExpense = (CategoriaGastos)cmbCategoria.SelectedItem,
-            };
+                Gastos g = new Gastos()
+                {
+                    Name = txtName.Text,
+                    Description = txtDescription.Text,
+                    Date = DtDate.Value,
+                    Expenditure = decimal.Parse(txtGasto.Text),
+                    //Imagen = ImageToByte(btnImage.Image),
+                    CategoryExpense = (CategoriaGastos)cmbCategoria.SelectedItem,
+                };
 
-            gastosServices.Add(g);
-            dtgvData.DataSource = gastosServices.FindAll();
+                gastosServices.Add(g);
+                dtgvData.DataSource = gastosServices.FindAll();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error, ingrese solo numeros", ex.Message);
+            }
         }
 
         public byte[] ImageToByte(Image img)
@@ -70,5 +78,7 @@ namespace ProyectoFinal.Forms
             cmbCategoria.Items.AddRange(Enum.GetValues(typeof(CategoriaGastos)).Cast<object>().ToArray());
             dtgvData.DataSource = gastosServices.FindAll();
         }
+
+        
     }
 }

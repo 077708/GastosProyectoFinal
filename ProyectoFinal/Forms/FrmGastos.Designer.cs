@@ -30,11 +30,12 @@ namespace ProyectoFinal.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGastos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@ namespace ProyectoFinal.Forms
             this.rjCircularPictureBox2 = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.dtgvData = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnImage)).BeginInit();
@@ -60,6 +62,8 @@ namespace ProyectoFinal.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtDescription);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label4);
@@ -80,6 +84,17 @@ namespace ProyectoFinal.Forms
             this.panel1.Size = new System.Drawing.Size(935, 532);
             this.panel1.TabIndex = 0;
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(440, 226);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Descripcion:";
+            // 
             // txtDescription
             // 
             this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -99,7 +114,7 @@ namespace ProyectoFinal.Forms
             this.txtDescription.ForeColor = System.Drawing.Color.White;
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.Red;
             this.txtDescription.HoverState.Parent = this.txtDescription;
-            this.txtDescription.Location = new System.Drawing.Point(523, 220);
+            this.txtDescription.Location = new System.Drawing.Point(522, 212);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.PlaceholderText = "";
@@ -123,11 +138,11 @@ namespace ProyectoFinal.Forms
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(394, 50);
+            this.label4.Location = new System.Drawing.Point(391, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 22;
-            this.label4.Text = "Fecha";
+            this.label4.Text = "Fecha:";
             // 
             // DtDate
             // 
@@ -137,7 +152,7 @@ namespace ProyectoFinal.Forms
             this.DtDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DtDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DtDate.HoverState.Parent = this.DtDate;
-            this.DtDate.Location = new System.Drawing.Point(470, 40);
+            this.DtDate.Location = new System.Drawing.Point(470, 45);
             this.DtDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DtDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DtDate.Name = "DtDate";
@@ -163,7 +178,7 @@ namespace ProyectoFinal.Forms
             this.cmbCategoria.HoverState.Parent = this.cmbCategoria;
             this.cmbCategoria.ItemHeight = 30;
             this.cmbCategoria.ItemsAppearance.Parent = this.cmbCategoria;
-            this.cmbCategoria.Location = new System.Drawing.Point(449, 128);
+            this.cmbCategoria.Location = new System.Drawing.Point(443, 128);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.ShadowDecoration.Parent = this.cmbCategoria;
             this.cmbCategoria.Size = new System.Drawing.Size(233, 36);
@@ -174,11 +189,11 @@ namespace ProyectoFinal.Forms
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(394, 186);
+            this.label3.Location = new System.Drawing.Point(366, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 19;
-            this.label3.Text = "Categoria";
+            this.label3.Text = "Nombre:";
             // 
             // txtName
             // 
@@ -199,7 +214,7 @@ namespace ProyectoFinal.Forms
             this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.Red;
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(475, 174);
+            this.txtName.Location = new System.Drawing.Point(449, 86);
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "";
@@ -217,9 +232,9 @@ namespace ProyectoFinal.Forms
             this.btnImage.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.btnImage.BorderSize = 2;
             this.btnImage.GradientAngle = 50F;
-            this.btnImage.Location = new System.Drawing.Point(690, 50);
+            this.btnImage.Location = new System.Drawing.Point(688, 48);
             this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(134, 134);
+            this.btnImage.Size = new System.Drawing.Size(158, 158);
             this.btnImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnImage.TabIndex = 17;
             this.btnImage.TabStop = false;
@@ -230,22 +245,22 @@ namespace ProyectoFinal.Forms
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(368, 138);
+            this.label2.Location = new System.Drawing.Point(365, 138);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 16;
-            this.label2.Text = "Categoria";
+            this.label2.Text = "Categoria:";
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(378, 93);
+            this.label1.Location = new System.Drawing.Point(397, 183);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Ingreso";
+            this.label1.Text = "Ingreso:";
             // 
             // txtGasto
             // 
@@ -266,7 +281,7 @@ namespace ProyectoFinal.Forms
             this.txtGasto.ForeColor = System.Drawing.Color.White;
             this.txtGasto.HoverState.BorderColor = System.Drawing.Color.Red;
             this.txtGasto.HoverState.Parent = this.txtGasto;
-            this.txtGasto.Location = new System.Drawing.Point(451, 82);
+            this.txtGasto.Location = new System.Drawing.Point(470, 170);
             this.txtGasto.Name = "txtGasto";
             this.txtGasto.PasswordChar = '\0';
             this.txtGasto.PlaceholderText = "";
@@ -313,43 +328,43 @@ namespace ProyectoFinal.Forms
             // dtgvData
             // 
             this.dtgvData.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            this.dtgvData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgvData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.dtgvData.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgvData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgvData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvData.ColumnHeadersHeight = 21;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvData.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvData.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvData.EnableHeadersVisualStyles = false;
             this.dtgvData.GridColor = System.Drawing.Color.Red;
             this.dtgvData.Location = new System.Drawing.Point(115, 289);
             this.dtgvData.Name = "dtgvData";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvData.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvData.RowHeadersVisible = false;
             this.dtgvData.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.dtgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -376,6 +391,17 @@ namespace ProyectoFinal.Forms
             this.dtgvData.ThemeStyle.RowsStyle.Height = 22;
             this.dtgvData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgvData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(888, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Gastos";
             // 
             // FrmGastos
             // 
@@ -415,5 +441,7 @@ namespace ProyectoFinal.Forms
         private Guna.UI2.WinForms.Guna2DateTimePicker DtDate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtDescription;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }

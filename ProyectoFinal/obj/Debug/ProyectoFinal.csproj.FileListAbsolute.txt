@@ -66,3 +66,6 @@ C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.xml
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmControlEvent.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.UsersC.UserControlBlank.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.UsersC.UserControlDays.resources

@@ -103,6 +103,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmControlEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmControlEvent.Designer.cs">
+      <DependentUpon>FrmControlEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,21 @@
     <Compile Include="Logica\GastoR.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersC\UserControlBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsersC\UserControlBlank.Designer.cs">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersC\UserControlDays.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsersC\UserControlDays.Designer.cs">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\FrmControlEvent.resx">
+      <DependentUpon>FrmControlEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDashBoard.resx">
       <DependentUpon>FrmDashBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +203,12 @@
     <Content Include="Logica\BossDB.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="UsersC\UserControlBlank.resx">
+      <DependentUpon>UserControlBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersC\UserControlDays.resx">
+      <DependentUpon>UserControlDays.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -196,9 +223,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\AppCore\AppCore.csproj">
       <Project>{439C64B2-5C95-428E-B1F4-1300AC05391B}</Project>

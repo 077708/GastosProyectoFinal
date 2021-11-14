@@ -1,4 +1,6 @@
-﻿using ProyectoFinal.UsersC;
+﻿using Domain.Entities;
+using Domain.Enums;
+using ProyectoFinal.UsersC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +28,7 @@ namespace ProyectoFinal.Forms
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             lblMotnh.Text = monthname + " " + year;
             lblMotnh.Text = monthname;
+            cmbCategoria.Items.AddRange(Enum.GetValues(typeof(CategoriaIngresos)).Cast<object>().ToArray());
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -123,6 +126,30 @@ namespace ProyectoFinal.Forms
 
                 daycontainer.Controls.Add(userControl);
             }
+        }
+
+        private void btnCalculadora_Click(object sender, EventArgs e)
+        {
+            FrmCalculadora frmCalculadora = new FrmCalculadora();
+
+            frmCalculadora.Show();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Ingresos ingreso = new Ingresos()
+            {
+                Name = txtName.Text,
+                Description = txtDescription.Text,
+                Expenditure = decimal.Parse(txtIngreso.Text),
+                CategoryExpense = (CategoriaIngresos)cmbCategoria.SelectedItem,
+
+            };
         }
 
         private void DisplaysDays()

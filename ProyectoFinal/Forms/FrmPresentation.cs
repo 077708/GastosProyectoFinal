@@ -66,7 +66,42 @@ namespace ProyectoFinal.Forms
         private void btnIngresos_Click(object sender, EventArgs e)
         {
             FrmIngresos frmIngresos = new FrmIngresos();
-            AbrirFormEnPanel(frmIngresos);
+            AbrirFormulario<FrmIngresos>();
+            btnIngresos.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void AbrirFormulario<MiForm>() where MiForm : Form, new()
+        {
+            Form formulario;
+            formulario = panelContenedorForm.Controls.OfType<MiForm>().FirstOrDefault();//Busca en la colecion el formulario
+            //si el formulario/instancia no existe
+            if (formulario == null)
+            {
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelContenedorForm.Controls.Add(formulario);
+                panelContenedorForm.Tag = formulario;
+                formulario.Show();
+                formulario.BringToFront();
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
+            }
+            //si el formulario/instancia existe
+            else
+            {
+                formulario.BringToFront();
+            }
+        }
+
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["Form1"] == null)
+                btnGastos.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["Form2"] == null)
+                btnIngresos.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["Form3"] == null)
+                btnSaldo.BackColor = Color.FromArgb(4, 41, 68);
         }
 
         private void AbrirFormEnPanel(object formHijo)

@@ -8,5 +8,10 @@ namespace Domain.Enums
 {
     public enum CategoriaIngresos
     {
+        Colegio,
+        Iglesia,
+        Universidad,
+        Comida,
+        Familia,
     }
 }

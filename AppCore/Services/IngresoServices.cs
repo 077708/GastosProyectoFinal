@@ -1,5 +1,6 @@
 ﻿using AppCore.IServices;
 using Domain.Entities;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,24 +11,31 @@ namespace AppCore.Services
 {
     public class IngresoServices : IIngresosServices
     {
+        private IIngresos ingresos;
+
+        public IngresoServices(IIngresos ingresos)
+        {
+            this.ingresos = ingresos;
+        }
+
         public bool Add(Ingresos t)
         {
-            throw new NotImplementedException();
+            return ingresos.Add(t);
         }
 
         public bool Delete(Ingresos t)
         {
-            throw new NotImplementedException();
+            return ingresos.Delete(t);
         }
 
         public List<Ingresos> FindAll()
         {
-            throw new NotImplementedException();
+            return ingresos.FindAll();
         }
 
         public bool Update(Ingresos t)
         {
-            throw new NotImplementedException();
+            return ingresos.Update(t);
         }
     }
 }

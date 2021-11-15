@@ -23,17 +23,18 @@ namespace ProyectoFinal
             var builder = new ContainerBuilder();
 
             builder.RegisterType<GastoServices>().As<IGastosServices>();
-            builder.RegisterType<IngresoServices>().As<IIngresosServices>();
-
-            builder.RegisterType<SaldoServices>().As<ISaldoServices>();
             builder.RegisterType<GastoR>().As<IGastos>();
+
+
+            builder.RegisterType<IngresoServices>().As<IIngresosServices>();
+            builder.RegisterType<IngresoR>().As<IIngresos>();
 
             var container = builder.Build();
 
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPresentation(container.Resolve<IGastosServices>()));
+            Application.Run(new FrmPresentation(container.Resolve<IGastosServices>(), container.Resolve<IIngresosServices>()));
         }
     }
 }

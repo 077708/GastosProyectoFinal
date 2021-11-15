@@ -1,5 +1,6 @@
 ﻿using AppCore.IServices;
 using Domain.Entities;
+using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,24 +11,21 @@ namespace AppCore.Services
 {
     public class SaldoServices : ISaldoServices
     {
-        public bool Add(Saldo t)
+        private ISaldo saldo;
+
+        public SaldoServices(ISaldo saldo)
         {
-            throw new NotImplementedException();
+            this.saldo = saldo;
         }
 
-        public bool Delete(Saldo t)
+        public bool Add(Saldo t)
         {
-            throw new NotImplementedException();
+            return saldo.Add(t);
         }
 
         public List<Saldo> FindAll()
         {
-            throw new NotImplementedException();
-        }
-
-        public bool Update(Saldo t)
-        {
-            throw new NotImplementedException();
+            return saldo.FindAll();
         }
     }
 }

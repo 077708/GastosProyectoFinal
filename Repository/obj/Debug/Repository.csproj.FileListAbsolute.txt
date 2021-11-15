@@ -1,0 +1,6 @@
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\bin\Debug\Repository.dll
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\bin\Debug\Repository.pdb
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Repository.dll
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Repository.pdb

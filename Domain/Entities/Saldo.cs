@@ -9,7 +9,6 @@ namespace Domain.Entities
 {
     public class Saldo
     {
-        public int Id { get; set; }
-    
+
     }
 }

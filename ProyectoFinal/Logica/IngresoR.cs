@@ -1,5 +1,4 @@
 ﻿using Domain.Entities;
-using Domain.Enums;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -10,28 +9,24 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal.Logica
 {
-    public class GastoR :ConexionDB, IGastos
+    public class IngresoR : ConexionDB, IIngresos
     {
-        public bool Add(Gastos t)
+        public bool Add(Ingresos t)
         {
             bool respuesta = true;
-
-            using (SQLiteConnection conexion = new SQLiteConnection(ConexionDB.cadena))
+            
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
             {
-                //Abrimos conexion
                 conexion.Open();
-                //Hacemos una consulta de insert a la tabla personas
-                string query = "insert into TBGastos(Name, Description, Fecha, Gasto, Categoria) " +
-                            " values (@name, @description, @fecha, @gasto, @categoria)";
 
-                //Luego de eso tenemos que agregarle datos con sqliteCOmmand
-                //Este recibe una consulta y una conexion
+                string query = "insert into IngresosDB(Name, Description, Date, Ingreso, Categoria) value (@name, @description, @Date, @Ingreso, @categoria)";
+
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
                 cmd.Parameters.Add(new SQLiteParameter("@name", t.Name));
                 cmd.Parameters.Add(new SQLiteParameter("@description", t.Description));
-                cmd.Parameters.Add(new SQLiteParameter("@fecha", t.Date.ToString()));
-                cmd.Parameters.Add(new SQLiteParameter("@gasto", t.Expenditure));
+                cmd.Parameters.Add(new SQLiteParameter("@Date", t.Date));
+                cmd.Parameters.Add(new SQLiteParameter("@Ingreso", t.Expenditure));
                 cmd.Parameters.Add(new SQLiteParameter("@categoria", t.CategoryExpense));
 
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -42,56 +37,49 @@ namespace ProyectoFinal.Logica
                 }
 
                 conexion.Close();
-
-                return respuesta;
             }
+
+            return respuesta;
         }
 
-        public bool Delete(Gastos t)
+        public bool Delete(Ingresos t)
         {
             throw new NotImplementedException();
         }
 
-        public List<Gastos> FindAll()
+        public List<Ingresos> FindAll()
         {
-            List<Gastos> gastos = new List<Gastos>();
+            List<Ingresos> ingresos = new List<Ingresos>();
 
-            using (SQLiteConnection conexion = new SQLiteConnection(ConexionDB.cadena))
+            using (SQLiteConnection conexion = new SQLiteConnection(cadena))
             {
-                //Abrimos conexion
                 conexion.Open();
-                //Hacemos una consulta de insert a la tabla personas
-                string query = "select * from TBGastos";
 
-                //Luego de eso tenemos que agregarle datos con sqliteCOmmand
-                //Este recibe una consulta y una conexion
+                string query = "select * from IngresosDB";
+
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
                 cmd.CommandType = System.Data.CommandType.Text;
 
                 using (SQLiteDataReader dr = cmd.ExecuteReader())
                 {
-                    while (dr.Read())
+                    while(dr.Read())
                     {
-                        gastos.Add(new Gastos()
+                        ingresos.Add(new Ingresos()
                         {
                             Id = int.Parse(dr["Id"].ToString()),
                             Name = dr["Name"].ToString(),
                             Description = dr["Description"].ToString(),
                             Date = DateTime.Now,
                             Expenditure = decimal.Parse(dr["Gasto"].ToString()),
-                            CategoryExpense = (CategoriaGastos)CategoriaGastos.Colegio,
                         });
                     }
                 }
-
-                conexion.Close();
             }
 
-
-            return gastos;
+            return ingresos;
         }
 
-        public bool Update(Gastos t)
+        public bool Update(Ingresos t)
         {
             throw new NotImplementedException();
         }

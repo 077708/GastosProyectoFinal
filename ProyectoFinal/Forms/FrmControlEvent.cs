@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AppCore.IServices;
+using Domain.Entities;
+using Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +16,11 @@ namespace ProyectoFinal.Forms
 {
     public partial class FrmControlEvent : Form
     {
-        public FrmControlEvent()
+        private IIngresosServices ingresosServices;
+
+        public FrmControlEvent(IIngresosServices ingresosServices)
         {
+            this.ingresosServices = ingresosServices;
             InitializeComponent();
         }
 
@@ -33,6 +39,24 @@ namespace ProyectoFinal.Forms
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Ingresos ingreso = new Ingresos()
+            {
+                Name = txtName.Text,
+                Description = txtDescription.Text,
+                Expenditure = decimal.Parse(txtIngreso.Text),
+                CategoryExpense = (CategoriaIngresos)cmbCategoria.SelectedItem,
+            };
+
+            ingresosServices.Add(ingreso);
+        }
+
+        private void FrmControlEvent_Load(object sender, EventArgs e)
+        {
+            cmbCategoria.Items.AddRange(Enum.GetValues(typeof(CategoriaIngresos)).Cast<Object>().ToArray());
         }
     }
 }

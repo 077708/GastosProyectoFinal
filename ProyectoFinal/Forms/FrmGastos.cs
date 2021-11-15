@@ -79,6 +79,9 @@ namespace ProyectoFinal.Forms
             dtgvData.DataSource = gastosServices.FindAll();
         }
 
-        
+        private void rjCircularPictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

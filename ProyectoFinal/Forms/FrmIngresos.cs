@@ -1,4 +1,5 @@
-﻿using Domain.Entities;
+﻿using AppCore.IServices;
+using Domain.Entities;
 using Domain.Enums;
 using ProyectoFinal.UsersC;
 using System;
@@ -16,9 +17,13 @@ namespace ProyectoFinal.Forms
 {
     public partial class FrmIngresos : Form
     {
+        private IIngresosServices ingresosServices;
+
         int month, year;
-        public FrmIngresos()
+
+        public FrmIngresos(IIngresosServices ingresosServices)
         {
+            this.ingresosServices = ingresosServices;
             InitializeComponent();
         }
 
@@ -72,7 +77,7 @@ namespace ProyectoFinal.Forms
 
             for (int i = 1; i < day; i++)
             {
-                UserControlDays userControl = new UserControlDays();
+                UserControlDays userControl = new UserControlDays(this.ingresosServices);
 
                 userControl.days(i);
 
@@ -120,7 +125,7 @@ namespace ProyectoFinal.Forms
 
             for (int i = 1; i < day; i++)
             {
-                UserControlDays userControl = new UserControlDays();
+                UserControlDays userControl = new UserControlDays(this.ingresosServices);
 
                 userControl.days(i);
 
@@ -148,10 +153,30 @@ namespace ProyectoFinal.Forms
                 Description = txtDescription.Text,
                 Expenditure = decimal.Parse(txtIngreso.Text),
                 CategoryExpense = (CategoriaIngresos)cmbCategoria.SelectedItem,
-
             };
+
+            ingresosServices.Add(ingreso);
         }
 
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+            CargarImagen(btnImage);
+        }
+
+        private OpenFileDialog fd = new OpenFileDialog();
+
+        private void CargarImagen(PictureBox pictureBox)
+        {
+            //Establecer la propiedad de WaitOnLoad a true significa que la imagen
+            //se carga de forma sincrónica
+            pictureBox.WaitOnLoad = true;
+            fd.Filter = "Imagenes|*.jpg;*.gif;*.png;*.bmp";
+            fd.ShowDialog();
+            if (fd.FileName != string.Empty)
+            {
+                pictureBox.ImageLocation = fd.FileName;
+            }
+        }
         private void DisplaysDays()
         {
             DateTime now = DateTime.Now;
@@ -185,7 +210,7 @@ namespace ProyectoFinal.Forms
 
             for (int i = 1; i < day; i++)
             {
-                UserControlDays userControl = new UserControlDays();
+                UserControlDays userControl = new UserControlDays(this.ingresosServices);
 
                 userControl.days(i);
 

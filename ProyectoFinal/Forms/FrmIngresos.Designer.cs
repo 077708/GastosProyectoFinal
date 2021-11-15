@@ -337,9 +337,9 @@ namespace ProyectoFinal.Forms
             this.Description.ForeColor = System.Drawing.Color.White;
             this.Description.Location = new System.Drawing.Point(449, 329);
             this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(52, 13);
+            this.Description.Size = new System.Drawing.Size(63, 13);
             this.Description.TabIndex = 8;
-            this.Description.Text = "Categoria";
+            this.Description.Text = "Description:";
             // 
             // txtDescription
             // 
@@ -378,12 +378,13 @@ namespace ProyectoFinal.Forms
             this.btnImage.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.btnImage.BorderSize = 2;
             this.btnImage.GradientAngle = 50F;
-            this.btnImage.Location = new System.Drawing.Point(744, 212);
+            this.btnImage.Location = new System.Drawing.Point(731, 218);
             this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(100, 100);
+            this.btnImage.Size = new System.Drawing.Size(113, 113);
             this.btnImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnImage.TabIndex = 6;
             this.btnImage.TabStop = false;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // label2
             // 
@@ -392,9 +393,9 @@ namespace ProyectoFinal.Forms
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(437, 284);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Categoria";
+            this.label2.Text = "Categoria:";
             // 
             // label1
             // 
@@ -403,9 +404,9 @@ namespace ProyectoFinal.Forms
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(466, 242);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Ingreso";
+            this.label1.Text = "Ingreso:";
             // 
             // lbSelected
             // 
@@ -445,7 +446,7 @@ namespace ProyectoFinal.Forms
             this.txtIngreso.ForeColor = System.Drawing.Color.White;
             this.txtIngreso.HoverState.BorderColor = System.Drawing.Color.Red;
             this.txtIngreso.HoverState.Parent = this.txtIngreso;
-            this.txtIngreso.Location = new System.Drawing.Point(538, 227);
+            this.txtIngreso.Location = new System.Drawing.Point(532, 227);
             this.txtIngreso.Name = "txtIngreso";
             this.txtIngreso.PasswordChar = '\0';
             this.txtIngreso.PlaceholderText = "";

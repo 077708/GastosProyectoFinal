@@ -1,4 +1,5 @@
-﻿using ProyectoFinal.Forms;
+﻿using AppCore.IServices;
+using ProyectoFinal.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,8 +14,11 @@ namespace ProyectoFinal.UsersC
 {
     public partial class UserControlDays : UserControl
     {
-        public UserControlDays()
+        private IIngresosServices ingreso;
+
+        public UserControlDays(IIngresosServices ingreso)
         {
+            this.ingreso = ingreso;
             InitializeComponent();
         }
 
@@ -25,7 +29,7 @@ namespace ProyectoFinal.UsersC
 
         private void UserControlDays_Click(object sender, EventArgs e)
         {
-            FrmControlEvent frmControlEvent = new FrmControlEvent();
+            FrmControlEvent frmControlEvent = new FrmControlEvent(this.ingreso);
             frmControlEvent.Show();
         }
     }

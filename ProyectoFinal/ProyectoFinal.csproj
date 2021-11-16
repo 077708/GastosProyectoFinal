@@ -160,6 +160,7 @@
     <Compile Include="Logica\ConexionDB.cs" />
     <Compile Include="Logica\GastoR.cs" />
     <Compile Include="Logica\IngresoR.cs" />
+    <Compile Include="Logica\SaldoR.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsersC\UserControlBlank.cs">
@@ -242,6 +243,10 @@
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{93191810-52B7-4BAF-80C5-91DF3CCF524E}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{5CE6C836-98A3-48D7-A324-EF518C7B2A7F}</Project>
+      <Name>Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -70,3 +70,6 @@ C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.UsersC.UserControlBlank.resources
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.UsersC.UserControlDays.resources
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmCalculadora.resources
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.csproj.CopyComplete
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Repository.dll
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Repository.pdb

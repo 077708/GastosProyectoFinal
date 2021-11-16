@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
-    public interface ISaldo : IColeccion<Saldo>
+    public interface ISaldo
     {
+        bool Add(Saldo t);
+
+        List<Saldo> FindAll();
     }
 }

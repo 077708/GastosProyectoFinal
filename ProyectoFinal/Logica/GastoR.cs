@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal.Logica
 {
-    public class GastoR :ConexionDB, IGastos
+    public class GastoR : ConexionDB, IGastos
     {
         public bool Add(Gastos t)
         {
@@ -30,9 +30,9 @@ namespace ProyectoFinal.Logica
 
                 cmd.Parameters.Add(new SQLiteParameter("@name", t.Name));
                 cmd.Parameters.Add(new SQLiteParameter("@description", t.Description));
-                cmd.Parameters.Add(new SQLiteParameter("@fecha", t.Date.ToString()));
-                cmd.Parameters.Add(new SQLiteParameter("@gasto", t.Expenditure));
-                cmd.Parameters.Add(new SQLiteParameter("@categoria", t.CategoryExpense));
+                cmd.Parameters.Add(new SQLiteParameter("@fecha", t.Date));
+                cmd.Parameters.Add(new SQLiteParameter("@gasto", t.Gasto));
+                cmd.Parameters.Add(new SQLiteParameter("@categoria", (CategoriaGastos)t.CategoryExpense));
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -77,9 +77,9 @@ namespace ProyectoFinal.Logica
                             Id = int.Parse(dr["Id"].ToString()),
                             Name = dr["Name"].ToString(),
                             Description = dr["Description"].ToString(),
-                            Date = DateTime.Now,
-                            Expenditure = decimal.Parse(dr["Gasto"].ToString()),
-                            CategoryExpense = (CategoriaGastos)CategoriaGastos.Colegio,
+                            Date = DateTime.Parse(dr["Fecha"].ToString()),
+                            Gasto = decimal.Parse(dr["Gasto"].ToString()),
+                            CategoryExpense = (CategoriaGastos)Enum.Parse(typeof(CategoriaGastos), dr["Categoria"].ToString()),
                         });
                     }
                 }

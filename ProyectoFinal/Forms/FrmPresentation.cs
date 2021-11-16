@@ -16,9 +16,18 @@ namespace ProyectoFinal.Forms
     {
         private IGastosServices gastosServices;
         private IIngresosServices ingresos;
+        private IQueryIngresosServices queryIngresosServices;
+        private IQueryGastosServices queryGastosServices;
+        private ISaldoServices SaldoServices;
 
-        public FrmPresentation(IGastosServices gastosServices, IIngresosServices ingresos)
+        public FrmPresentation(IGastosServices gastosServices, IIngresosServices ingresos
+                              , IQueryIngresosServices queryIngresosServices, IQueryGastosServices queryGastosServices, 
+                                ISaldoServices SaldoServices)
         {
+
+            this.queryIngresosServices = queryIngresosServices;
+            this.queryGastosServices = queryGastosServices;
+            this.SaldoServices = SaldoServices;
             this.gastosServices = gastosServices;
             this.ingresos = ingresos;
             InitializeComponent();
@@ -67,7 +76,7 @@ namespace ProyectoFinal.Forms
 
         private void btnIngresos_Click(object sender, EventArgs e)
         {
-            FrmIngresos frmIngresos = new FrmIngresos(this.ingresos);
+            FrmIngresos frmIngresos = new FrmIngresos(this.ingresos, this.SaldoServices);
             //AbrirFormulario<FrmIngresos>();
             AbrirFormEnPanel(frmIngresos);
             //btnIngresos.BackColor = Color.FromArgb(12, 61, 92);
@@ -106,14 +115,14 @@ namespace ProyectoFinal.Forms
 
         private void btnGastos_Click(object sender, EventArgs e)
         {
-            FrmGastos frmGastos = new FrmGastos(this.gastosServices);
+            FrmGastos frmGastos = new FrmGastos(this.gastosServices, this.SaldoServices);
 
             AbrirFormEnPanel(frmGastos);
         }
 
         private void btnSaldo_Click(object sender, EventArgs e)
         {
-            FrmSaldos frmSaldos = new FrmSaldos();
+            FrmSaldos frmSaldos = new FrmSaldos(this.ingresos, this.gastosServices, this.SaldoServices);
             AbrirFormEnPanel(frmSaldos);
         }
 

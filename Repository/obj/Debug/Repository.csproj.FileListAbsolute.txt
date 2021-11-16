@@ -4,3 +4,6 @@ C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Rep
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Repository.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Repository.pdb
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\bin\Debug\Domain.dll
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\bin\Debug\Domain.pdb
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\Repository\obj\Debug\Repository.csproj.CopyComplete

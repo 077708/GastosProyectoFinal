@@ -17,9 +17,11 @@ namespace ProyectoFinal.Forms
     public partial class FrmControlEvent : Form
     {
         private IIngresosServices ingresosServices;
+        private ISaldoServices saldoServices;
 
-        public FrmControlEvent(IIngresosServices ingresosServices)
+        public FrmControlEvent(IIngresosServices ingresosServices, ISaldoServices saldoServices)
         {
+            this.saldoServices = saldoServices;
             this.ingresosServices = ingresosServices;
             InitializeComponent();
         }
@@ -47,7 +49,7 @@ namespace ProyectoFinal.Forms
             {
                 Name = txtName.Text,
                 Description = txtDescription.Text,
-                Expenditure = decimal.Parse(txtIngreso.Text),
+                Ingreso = decimal.Parse(txtIngreso.Text),
                 CategoryExpense = (CategoriaIngresos)cmbCategoria.SelectedItem,
             };
 

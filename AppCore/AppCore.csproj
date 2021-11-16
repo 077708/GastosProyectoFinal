@@ -43,11 +43,15 @@
   <ItemGroup>
     <Compile Include="IServices\IGastosServices.cs" />
     <Compile Include="IServices\IIngresosServices.cs" />
+    <Compile Include="IServices\IQueryGastosServices.cs" />
+    <Compile Include="IServices\IQueryIngresosServices.cs" />
     <Compile Include="IServices\ISaldoServices.cs" />
     <Compile Include="IServices\IServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GastoServices.cs" />
     <Compile Include="Services\IngresoServices.cs" />
+    <Compile Include="Services\QueryGastosServices.cs" />
+    <Compile Include="Services\QueryServicesIngresos.cs" />
     <Compile Include="Services\SaldoServices.cs" />
   </ItemGroup>
   <ItemGroup>

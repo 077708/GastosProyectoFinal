@@ -46,6 +46,8 @@
     <Compile Include="Entities\Saldo.cs" />
     <Compile Include="Enums\CategoriaGastos.cs" />
     <Compile Include="Enums\CategoriaIngresos.cs" />
+    <Compile Include="Interfaces\IQueryGastos.cs" />
+    <Compile Include="Interfaces\IQueryIngresos.cs" />
     <Compile Include="Interfaces\IColeccion.cs" />
     <Compile Include="Interfaces\IGastos.cs" />
     <Compile Include="Interfaces\IIngresos.cs" />

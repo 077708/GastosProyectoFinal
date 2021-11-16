@@ -35,7 +35,7 @@ namespace AppCore.Services
 
         public bool Update(Gastos t)
         {
-            throw new NotImplementedException();
+            return gastos.Update(t);
         }
     }
 }

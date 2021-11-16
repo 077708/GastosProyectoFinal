@@ -15,7 +15,7 @@ namespace Domain.Entities
 
         public string Description { get; set; }
 
-        public decimal Expenditure { get; set; }
+        public decimal Gasto { get; set; }
 
         public CategoriaGastos CategoryExpense { get; set; }
 

@@ -18,11 +18,13 @@ namespace ProyectoFinal.Forms
     public partial class FrmIngresos : Form
     {
         private IIngresosServices ingresosServices;
+        private ISaldoServices saldoServices;
 
         int month, year;
 
-        public FrmIngresos(IIngresosServices ingresosServices)
+        public FrmIngresos(IIngresosServices ingresosServices, ISaldoServices saldoServices)
         {
+            this.saldoServices = saldoServices;
             this.ingresosServices = ingresosServices;
             InitializeComponent();
         }
@@ -77,7 +79,7 @@ namespace ProyectoFinal.Forms
 
             for (int i = 1; i < day; i++)
             {
-                UserControlDays userControl = new UserControlDays(this.ingresosServices);
+                UserControlDays userControl = new UserControlDays(this.ingresosServices, this.saldoServices);
 
                 userControl.days(i);
 
@@ -125,7 +127,7 @@ namespace ProyectoFinal.Forms
 
             for (int i = 1; i < day; i++)
             {
-                UserControlDays userControl = new UserControlDays(this.ingresosServices);
+                UserControlDays userControl = new UserControlDays(this.ingresosServices, this.saldoServices);
 
                 userControl.days(i);
 
@@ -151,7 +153,7 @@ namespace ProyectoFinal.Forms
             {
                 Name = txtName.Text,
                 Description = txtDescription.Text,
-                Expenditure = decimal.Parse(txtIngreso.Text),
+                Ingreso = decimal.Parse(txtIngreso.Text),
                 CategoryExpense = (CategoriaIngresos)cmbCategoria.SelectedItem,
             };
 
@@ -210,7 +212,7 @@ namespace ProyectoFinal.Forms
 
             for (int i = 1; i < day; i++)
             {
-                UserControlDays userControl = new UserControlDays(this.ingresosServices);
+                UserControlDays userControl = new UserControlDays(this.ingresosServices, this.saldoServices);
 
                 userControl.days(i);
 

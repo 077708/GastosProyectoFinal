@@ -16,9 +16,10 @@ namespace ProyectoFinal.Forms
     public partial class FrmGastos : Form
     {
         private IGastosServices gastosServices;
-
-        public FrmGastos(IGastosServices gastosServices)
+        private ISaldoServices saldoServices;
+        public FrmGastos(IGastosServices gastosServices, ISaldoServices saldoServices)
         {
+            this.saldoServices = saldoServices;
             this.gastosServices = gastosServices;
             InitializeComponent();
         }
@@ -52,12 +53,19 @@ namespace ProyectoFinal.Forms
                     Name = txtName.Text,
                     Description = txtDescription.Text,
                     Date = DtDate.Value,
-                    Expenditure = decimal.Parse(txtGasto.Text),
+                    Gasto = decimal.Parse(txtGasto.Text),
                     //Imagen = ImageToByte(btnImage.Image),
                     CategoryExpense = (CategoriaGastos)cmbCategoria.SelectedItem,
                 };
 
                 gastosServices.Add(g);
+
+                Saldo s = new Saldo()
+                {
+                    ingresos = 0,
+                    Gastos = g,
+
+                };
                 dtgvData.DataSource = gastosServices.FindAll();
             }
             catch (Exception ex)
@@ -82,6 +90,11 @@ namespace ProyectoFinal.Forms
         private void rjCircularPictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

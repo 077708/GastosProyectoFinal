@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCore.IServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,15 @@ namespace ProyectoFinal.Forms
 {
     public partial class FrmSaldos : Form
     {
-        public FrmSaldos()
+        private IIngresosServices ingresoServices;
+        private ISaldoServices saldoServices;
+        private IGastosServices gastosServices;
+
+        public FrmSaldos(IIngresosServices ingresosServices, IGastosServices gastosServices, ISaldoServices saldoServices)
         {
+            this.saldoServices = saldoServices;
+            this.gastosServices = gastosServices;
+            this.ingresoServices = ingresosServices;
             InitializeComponent();
         }
     }

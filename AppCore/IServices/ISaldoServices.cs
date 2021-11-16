@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace AppCore.IServices
 {
-    public interface ISaldoServices : IServices<Saldo>
+    public interface ISaldoServices
     {
+        bool Add(Saldo t);
+
+        List<Saldo> FindAll();
     }
 }

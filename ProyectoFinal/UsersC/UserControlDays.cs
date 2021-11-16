@@ -15,9 +15,11 @@ namespace ProyectoFinal.UsersC
     public partial class UserControlDays : UserControl
     {
         private IIngresosServices ingreso;
+        private ISaldoServices SaldoServices;
 
-        public UserControlDays(IIngresosServices ingreso)
+        public UserControlDays(IIngresosServices ingreso, ISaldoServices SaldoServices)
         {
+            this.SaldoServices = SaldoServices;
             this.ingreso = ingreso;
             InitializeComponent();
         }
@@ -29,7 +31,7 @@ namespace ProyectoFinal.UsersC
 
         private void UserControlDays_Click(object sender, EventArgs e)
         {
-            FrmControlEvent frmControlEvent = new FrmControlEvent(this.ingreso);
+            FrmControlEvent frmControlEvent = new FrmControlEvent(this.ingreso, this.SaldoServices);
             frmControlEvent.Show();
         }
     }

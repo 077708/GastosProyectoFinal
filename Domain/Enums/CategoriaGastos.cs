@@ -8,10 +8,20 @@ namespace Domain.Enums
 {
     public enum CategoriaGastos
     {
-        Colegio,
-        Iglesia,
-        Universidad,
+        Automovil,
+        Facturas,
+        Ropa,
+        Entretenimiento,
         Comida,
-        Familia,
+        Gasolina,
+        General,
+        Regalos,
+        Salud,
+        Vacaciones,
+        Hogar,
+        Niños,
+        Compras,
+        Deportes,
+        Otros,
     }
 }

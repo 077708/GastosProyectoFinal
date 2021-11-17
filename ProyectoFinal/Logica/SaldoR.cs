@@ -19,13 +19,13 @@ namespace ProyectoFinal.Logica
             {
                 conexion.Open();
 
-                string query = "insert into TBSaldo(Ingreso, Gasto, SaldoTotal) values (@Ingreso, @Gasto, @SaldoTotal)";
+                string query = "insert into TSaldo(Ingreso, Gasto, SaldoTotal) values (@Ingreso, @Gasto, @SaldoTotal)";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
-                cmd.Parameters.Add(new SQLiteParameter("@Ingreso", t.Ingresos.Ingreso));
-                cmd.Parameters.Add(new SQLiteParameter("@Gasto", t.Gastos.Gasto));
-                cmd.Parameters.Add(new SQLiteParameter("SaldoTotal", t.SaldoTotal));
+                cmd.Parameters.Add(new SQLiteParameter("@Ingreso", t.Ingreso));
+                cmd.Parameters.Add(new SQLiteParameter("@Gasto", t.Gasto));
+                cmd.Parameters.Add(new SQLiteParameter("@SaldoTotal", t.Total));
 
                 cmd.CommandType = System.Data.CommandType.Text;
 
@@ -33,7 +33,7 @@ namespace ProyectoFinal.Logica
                 {
                     respuesta = false;
                 }
-                conexion.Close();
+                //conexion.Close();
             }
 
             return respuesta;
@@ -47,7 +47,7 @@ namespace ProyectoFinal.Logica
             {
                 conexion.Open();
 
-                string query = "from * select TBSaldo";
+                string query = "select * from TSaldo";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
                 cmd.CommandType = System.Data.CommandType.Text;
@@ -59,13 +59,13 @@ namespace ProyectoFinal.Logica
                         saldos.Add(new Saldo()
                         {
                             Id = int.Parse(dr["Id"].ToString()),
-                            ingresos = decimal.Parse(dr["Ingreso"].ToString()),
-                            gastos = decimal.Parse(dr["Gasto"].ToString()),
-                            total = decimal.Parse(dr["SaldoTotal"].ToString()),
+                            Ingreso = decimal.Parse(dr["Ingreso"].ToString()),
+                            Gasto = decimal.Parse(dr["Gasto"].ToString()),
+                            TotalDB = decimal.Parse(dr["SaldoTotal"].ToString()),
                         });
                     }
                 }
-                conexion.Close();
+                //conexion.Close();
             }
 
             return saldos;

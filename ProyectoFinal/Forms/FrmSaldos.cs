@@ -24,5 +24,10 @@ namespace ProyectoFinal.Forms
             this.ingresoServices = ingresosServices;
             InitializeComponent();
         }
+
+        private void FrmSaldos_Load(object sender, EventArgs e)
+        {
+            dtgvData.DataSource = saldoServices.FindAll();
+        }
     }
 }

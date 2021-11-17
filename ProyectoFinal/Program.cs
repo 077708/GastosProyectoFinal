@@ -35,7 +35,7 @@ namespace ProyectoFinal
             builder.RegisterType<GastosRepository>().As<IQueryGastos>();
             builder.RegisterType<QueryGastosServices>().As<IQueryGastosServices>();
 
-            builder.RegisterType<IngresosRepository>().As<IQueryIngresosServices>();
+            builder.RegisterType<IngresosRepository>().As<IQueryIngresos>();
             builder.RegisterType<QueryServicesIngresos>().As<IQueryIngresosServices>();
 
             //Inyeccion de dependencia de saldo
@@ -50,7 +50,7 @@ namespace ProyectoFinal
                 container.Resolve<IIngresosServices>(), 
                 container.Resolve<IQueryIngresosServices>(),
                 container.Resolve<IQueryGastosServices>(),
-                container.Resolve<SaldoServices>()));
+                container.Resolve<ISaldoServices>()));
         }
     }
 }

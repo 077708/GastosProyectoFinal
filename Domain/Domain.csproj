@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Entities\Gastos.cs" />
     <Compile Include="Entities\Ingresos.cs" />
+    <Compile Include="Entities\Resumen.cs" />
     <Compile Include="Entities\Saldo.cs" />
     <Compile Include="Enums\CategoriaGastos.cs" />
     <Compile Include="Enums\CategoriaIngresos.cs" />

@@ -54,6 +54,15 @@ namespace ProyectoFinal.Forms
             };
 
             ingresosServices.Add(ingreso);
+
+            Saldo saldo = new Saldo()
+            {
+                Ingreso = ingreso.Ingreso,
+                Gasto = 0,
+                Total = saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto),
+            };
+
+            saldoServices.Add(saldo);
         }
 
         private void FrmControlEvent_Load(object sender, EventArgs e)

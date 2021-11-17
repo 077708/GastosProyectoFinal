@@ -55,7 +55,7 @@ namespace ProyectoFinal.Logica
             {
                 conexion.Open();
 
-                string query = "select * from IngresosDB";
+                string query = "select * from TBIngresoS";
 
                 SQLiteCommand cmd = new SQLiteCommand(query, conexion);
                 cmd.CommandType = System.Data.CommandType.Text;

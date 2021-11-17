@@ -59,14 +59,17 @@ namespace ProyectoFinal.Forms
                 };
 
                 gastosServices.Add(g);
-
-                Saldo s = new Saldo()
-                {
-                    ingresos = 0,
-                    Gastos = g,
-
-                };
                 dtgvData.DataSource = gastosServices.FindAll();
+
+                Saldo saldo = new Saldo()
+                {
+                    Ingreso = 0,
+                    Gasto = g.Gasto,
+                    Total = saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto),
+                };
+
+                saldoServices.Add(saldo);
+
             }
             catch (Exception ex)
             {

@@ -16,8 +16,5 @@ namespace Domain.Entities
         public decimal Gasto { get; set; }
 
         public decimal Total { get; set; }
-
-        public decimal TotalDB { get; set; }
-
     }
 }

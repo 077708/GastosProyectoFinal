@@ -61,7 +61,7 @@ namespace ProyectoFinal.Logica
                             Id = int.Parse(dr["Id"].ToString()),
                             Ingreso = decimal.Parse(dr["Ingreso"].ToString()),
                             Gasto = decimal.Parse(dr["Gasto"].ToString()),
-                            TotalDB = decimal.Parse(dr["SaldoTotal"].ToString()),
+                            Total = decimal.Parse(dr["SaldoTotal"].ToString()),
                         });
                     }
                 }

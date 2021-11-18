@@ -62,6 +62,7 @@ namespace ProyectoFinal.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.dtgvData);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtDescription);
@@ -77,7 +78,6 @@ namespace ProyectoFinal.Forms
             this.panel1.Controls.Add(this.txtGasto);
             this.panel1.Controls.Add(this.rjCircularPictureBox2);
             this.panel1.Controls.Add(this.btnAceptar);
-            this.panel1.Controls.Add(this.dtgvData);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -353,7 +353,7 @@ namespace ProyectoFinal.Forms
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -362,13 +362,13 @@ namespace ProyectoFinal.Forms
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvData.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvData.EnableHeadersVisualStyles = false;
-            this.dtgvData.GridColor = System.Drawing.Color.Red;
-            this.dtgvData.Location = new System.Drawing.Point(115, 289);
+            this.dtgvData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.dtgvData.Location = new System.Drawing.Point(98, 286);
             this.dtgvData.Name = "dtgvData";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -381,15 +381,15 @@ namespace ProyectoFinal.Forms
             this.dtgvData.RowHeadersVisible = false;
             this.dtgvData.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
             this.dtgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvData.Size = new System.Drawing.Size(668, 147);
-            this.dtgvData.TabIndex = 0;
+            this.dtgvData.Size = new System.Drawing.Size(735, 167);
+            this.dtgvData.TabIndex = 27;
             this.dtgvData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgvData.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dtgvData.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dtgvData.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dtgvData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dtgvData.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.dtgvData.ThemeStyle.GridColor = System.Drawing.Color.Red;
+            this.dtgvData.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
             this.dtgvData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.dtgvData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgvData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -429,7 +429,6 @@ namespace ProyectoFinal.Forms
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgvData;
         private RJCodeAdvance.RJControls.RJCircularPictureBox btnAceptar;
         private Guna.UI2.WinForms.Guna2ComboBox cmbCategoria;
         private System.Windows.Forms.Label label3;
@@ -445,5 +444,6 @@ namespace ProyectoFinal.Forms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private RJCodeAdvance.RJControls.RJCircularPictureBox rjCircularPictureBox2;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgvData;
     }
 }

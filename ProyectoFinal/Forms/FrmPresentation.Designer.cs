@@ -179,7 +179,7 @@ namespace ProyectoFinal.Forms
             this.btnSaldo.Name = "btnSaldo";
             this.btnSaldo.Size = new System.Drawing.Size(251, 40);
             this.btnSaldo.TabIndex = 8;
-            this.btnSaldo.Text = "Saldo";
+            this.btnSaldo.Text = "Consultas";
             this.btnSaldo.TextColor = System.Drawing.Color.White;
             this.btnSaldo.UseVisualStyleBackColor = false;
             this.btnSaldo.Click += new System.EventHandler(this.btnSaldo_Click);

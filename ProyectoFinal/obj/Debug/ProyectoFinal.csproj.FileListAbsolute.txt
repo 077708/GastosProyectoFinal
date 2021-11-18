@@ -72,3 +72,4 @@ C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\obj\Debug\ProyectoFinal.Forms.FrmCalculadora.resources
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Repository.dll
 C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Repository.pdb
+C:\Users\Paulo Mayorga\Source\Repos\GastosProyectoFinal\ProyectoFinal\bin\Debug\Guna.Charts.WinForms.dll

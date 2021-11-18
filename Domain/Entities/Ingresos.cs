@@ -17,8 +17,6 @@ namespace Domain.Entities
 
         public decimal Ingreso { get; set; }
 
-        public decimal IngresoAux { get; set; }
-
         public CategoriaIngresos CategoryExpense { get; set; }
 
         public DateTime Date { get; set; }

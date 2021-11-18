@@ -3,6 +3,7 @@ using Domain.Enums;
 using Domain.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,11 @@ namespace Repository.LogicaDB
         public List<Gastos> GetbyUnit(List<Gastos> gastos, CategoriaGastos categoria)
         {
             return (from e in gastos where e.CategoryExpense == categoria select e).ToList();
+        }
+        
+        public decimal GetByPriceDashboard(DateTime btnDashboard, List<Gastos> gastos, int monthCount)
+        {
+            return gastos.Where(item => item.Date.Year == btnDashboard.Year && item.Date.Month == monthCount).Sum(item => item.Gasto); ;
         }
     }
 }

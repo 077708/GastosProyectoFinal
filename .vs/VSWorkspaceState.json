@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\ProyectoFinal",
-    "\\ProyectoFinal\\Forms"
+    "\\ProyectoFinal\\Forms",
+    "\\ProyectoFinal\\Logica"
   ],
-  "SelectedNode": "\\ProyectoFinal\\Forms\\FrmIngresos.cs",
+  "SelectedNode": "\\ProyectoFinal\\Forms\\FrmDashBoard.cs",
   "PreviewInSolutionExplorer": false
 }

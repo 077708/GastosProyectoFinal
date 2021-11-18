@@ -39,6 +39,11 @@ namespace AppCore.Services
             return queryGastos.GetByName(gastos, Name);
         }
 
+        public decimal GetByPriceDashboard(DateTime btnDashboard, List<Gastos> gastos, int monthCount)
+        {
+            return queryGastos.GetByPriceDashboard(btnDashboard, gastos, monthCount);
+        }
+
         public List<Gastos> GetbyUnit(List<Gastos> gastos, CategoriaGastos categoria)
         {
             return queryGastos.GetbyUnit(gastos, categoria);

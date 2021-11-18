@@ -109,13 +109,13 @@ namespace ProyectoFinal.Forms
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            FrmDashBoard frmDashBoard = new FrmDashBoard();
+            FrmDashBoard frmDashBoard = new FrmDashBoard(this.SaldoServices, this.gastosServices, this.ingresos, this.queryGastosServices);
             AbrirFormEnPanel(frmDashBoard);
         }
 
         private void btnGastos_Click(object sender, EventArgs e)
         {
-            FrmGastos frmGastos = new FrmGastos(this.gastosServices, this.SaldoServices);
+            FrmGastos frmGastos = new FrmGastos(this.gastosServices, this.SaldoServices, this.ingresos);
 
             AbrirFormEnPanel(frmGastos);
         }

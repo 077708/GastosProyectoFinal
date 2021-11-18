@@ -17,8 +17,11 @@ namespace ProyectoFinal.Forms
     {
         private IGastosServices gastosServices;
         private ISaldoServices saldoServices;
-        public FrmGastos(IGastosServices gastosServices, ISaldoServices saldoServices)
+        private IIngresosServices ingresosServices;
+
+        public FrmGastos(IGastosServices gastosServices, ISaldoServices saldoServices, IIngresosServices ingresosServices)
         {
+            this.ingresosServices = ingresosServices;
             this.saldoServices = saldoServices;
             this.gastosServices = gastosServices;
             InitializeComponent();
@@ -55,20 +58,21 @@ namespace ProyectoFinal.Forms
                     Date = DtDate.Value,
                     Gasto = decimal.Parse(txtGasto.Text),
                     //Imagen = ImageToByte(btnImage.Image),
+
                     CategoryExpense = (CategoriaGastos)cmbCategoria.SelectedItem,
                 };
 
                 gastosServices.Add(g);
-                dtgvData.DataSource = gastosServices.FindAll();
 
                 Saldo saldo = new Saldo()
                 {
                     Ingreso = 0,
                     Gasto = g.Gasto,
-                    Total = saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto),
+                    Total = ingresosServices.FindAll().Sum(item => item.Ingreso) - gastosServices.FindAll().Sum(item => item.Gasto),
                 };
 
                 saldoServices.Add(saldo);
+                dtgvData.DataSource = gastosServices.FindAll();
 
             }
             catch (Exception ex)

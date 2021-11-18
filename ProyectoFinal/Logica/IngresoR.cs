@@ -70,7 +70,7 @@ namespace ProyectoFinal.Logica
                             Name = dr["Name"].ToString(),
                             Description = dr["Description"].ToString(),
                             Date = DateTime.Parse(dr["Date"].ToString()),
-                            Ingreso = decimal.Parse(dr["Gasto"].ToString()),
+                            Ingreso = decimal.Parse(dr["Ingreso"].ToString()),
                             CategoryExpense = (CategoriaIngresos)Enum.Parse(typeof(CategoriaIngresos), dr["Categoria"].ToString()),
                         });
                     }

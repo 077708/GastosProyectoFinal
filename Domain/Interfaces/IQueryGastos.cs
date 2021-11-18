@@ -19,5 +19,7 @@ namespace Domain.Interfaces
         List<Gastos> GetbyUnit(List<Gastos> gastos, CategoriaGastos categoria);
 
         List<Gastos> GetByDate(List<Gastos> gastos, DateTime dateTime);
+
+        decimal GetByPriceDashboard(DateTime btnDashboard, List<Gastos> gastos, int monthCount);
     }
 }

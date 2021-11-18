@@ -59,8 +59,18 @@ namespace ProyectoFinal.Forms
             {
                 Ingreso = ingreso.Ingreso,
                 Gasto = 0,
-                Total = saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto),
+                //Total = saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto),
             };
+
+            if (ingresosServices.FindAll().Count == 1)
+            {
+                saldo.Total = ingreso.Ingreso;
+            }
+            else
+            {
+                saldo.Total = saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto)
+                   + ingresosServices.FindAll()[0].Ingreso;
+            }
 
             saldoServices.Add(saldo);
         }

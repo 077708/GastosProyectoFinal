@@ -428,6 +428,7 @@ namespace ProyectoFinal.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPresentation";
             this.Text = "FrmPresentation";
+            this.Load += new System.EventHandler(this.FrmPresentation_Load);
             this.barra.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelButtons.ResumeLayout(false);

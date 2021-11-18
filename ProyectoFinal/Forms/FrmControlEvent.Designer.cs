@@ -31,7 +31,10 @@ namespace ProyectoFinal.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmControlEvent));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.name = new System.Windows.Forms.Label();
+            this.txtIngreso = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblSelectedDate = new System.Windows.Forms.Label();
             this.btnCancelar = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.btnAceptar = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.panelBarra = new System.Windows.Forms.Panel();
@@ -41,9 +44,6 @@ namespace ProyectoFinal.Forms
             this.prjpImage = new RJCodeAdvance.RJControls.RJCircularPictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIngreso = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.name = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancelar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAceptar)).BeginInit();
@@ -56,7 +56,7 @@ namespace ProyectoFinal.Forms
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.name);
             this.panel1.Controls.Add(this.txtIngreso);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblSelectedDate);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnAceptar);
             this.panel1.Controls.Add(this.panelBarra);
@@ -72,15 +72,82 @@ namespace ProyectoFinal.Forms
             this.panel1.Size = new System.Drawing.Size(562, 336);
             this.panel1.TabIndex = 0;
             // 
-            // label3
+            // txtName
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(13, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "8 de septiembre del 2021";
+            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.txtName.BorderRadius = 15;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.DefaultText = "";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.Parent = this.txtName;
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.FocusedState.Parent = this.txtName;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.White;
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtName.HoverState.Parent = this.txtName;
+            this.txtName.Location = new System.Drawing.Point(228, 73);
+            this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
+            this.txtName.PlaceholderText = "";
+            this.txtName.SelectedText = "";
+            this.txtName.ShadowDecoration.Parent = this.txtName;
+            this.txtName.Size = new System.Drawing.Size(188, 36);
+            this.txtName.TabIndex = 27;
+            // 
+            // name
+            // 
+            this.name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.name.AutoSize = true;
+            this.name.ForeColor = System.Drawing.Color.White;
+            this.name.Location = new System.Drawing.Point(158, 84);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(47, 13);
+            this.name.TabIndex = 26;
+            this.name.Text = "Nombre:";
+            // 
+            // txtIngreso
+            // 
+            this.txtIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIngreso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.txtIngreso.BorderRadius = 15;
+            this.txtIngreso.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIngreso.DefaultText = "";
+            this.txtIngreso.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIngreso.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIngreso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIngreso.DisabledState.Parent = this.txtIngreso;
+            this.txtIngreso.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIngreso.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
+            this.txtIngreso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIngreso.FocusedState.Parent = this.txtIngreso;
+            this.txtIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIngreso.ForeColor = System.Drawing.Color.White;
+            this.txtIngreso.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.txtIngreso.HoverState.Parent = this.txtIngreso;
+            this.txtIngreso.Location = new System.Drawing.Point(159, 120);
+            this.txtIngreso.Name = "txtIngreso";
+            this.txtIngreso.PasswordChar = '\0';
+            this.txtIngreso.PlaceholderText = "";
+            this.txtIngreso.SelectedText = "";
+            this.txtIngreso.ShadowDecoration.Parent = this.txtIngreso;
+            this.txtIngreso.Size = new System.Drawing.Size(204, 36);
+            this.txtIngreso.TabIndex = 25;
+            // 
+            // lblSelectedDate
+            // 
+            this.lblSelectedDate.AutoSize = true;
+            this.lblSelectedDate.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblSelectedDate.Location = new System.Drawing.Point(13, 36);
+            this.lblSelectedDate.Name = "lblSelectedDate";
+            this.lblSelectedDate.Size = new System.Drawing.Size(126, 13);
+            this.lblSelectedDate.TabIndex = 24;
+            this.lblSelectedDate.Text = "8 de septiembre del 2021";
             // 
             // btnCancelar
             // 
@@ -228,73 +295,6 @@ namespace ProyectoFinal.Forms
             this.label1.TabIndex = 15;
             this.label1.Text = "Ingreso:";
             // 
-            // txtIngreso
-            // 
-            this.txtIngreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtIngreso.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.txtIngreso.BorderRadius = 15;
-            this.txtIngreso.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIngreso.DefaultText = "";
-            this.txtIngreso.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIngreso.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIngreso.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIngreso.DisabledState.Parent = this.txtIngreso;
-            this.txtIngreso.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIngreso.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
-            this.txtIngreso.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIngreso.FocusedState.Parent = this.txtIngreso;
-            this.txtIngreso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngreso.ForeColor = System.Drawing.Color.White;
-            this.txtIngreso.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.txtIngreso.HoverState.Parent = this.txtIngreso;
-            this.txtIngreso.Location = new System.Drawing.Point(159, 120);
-            this.txtIngreso.Name = "txtIngreso";
-            this.txtIngreso.PasswordChar = '\0';
-            this.txtIngreso.PlaceholderText = "";
-            this.txtIngreso.SelectedText = "";
-            this.txtIngreso.ShadowDecoration.Parent = this.txtIngreso;
-            this.txtIngreso.Size = new System.Drawing.Size(204, 36);
-            this.txtIngreso.TabIndex = 25;
-            // 
-            // txtName
-            // 
-            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.txtName.BorderRadius = 15;
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultText = "";
-            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.DisabledState.Parent = this.txtName;
-            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
-            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.FocusedState.Parent = this.txtName;
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.White;
-            this.txtName.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(228, 73);
-            this.txtName.Name = "txtName";
-            this.txtName.PasswordChar = '\0';
-            this.txtName.PlaceholderText = "";
-            this.txtName.SelectedText = "";
-            this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(188, 36);
-            this.txtName.TabIndex = 27;
-            // 
-            // name
-            // 
-            this.name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.name.AutoSize = true;
-            this.name.ForeColor = System.Drawing.Color.White;
-            this.name.Location = new System.Drawing.Point(158, 84);
-            this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(47, 13);
-            this.name.TabIndex = 26;
-            this.name.Text = "Nombre:";
-            // 
             // FrmControlEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,7 +325,7 @@ namespace ProyectoFinal.Forms
         private RJCodeAdvance.RJControls.RJCircularPictureBox prjpImage;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblSelectedDate;
         private RJCodeAdvance.RJControls.RJCircularPictureBox btnCancelar;
         private RJCodeAdvance.RJControls.RJCircularPictureBox btnAceptar;
         private Guna.UI2.WinForms.Guna2TextBox txtIngreso;

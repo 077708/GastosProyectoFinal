@@ -39,7 +39,7 @@ namespace Repository.LogicaDB
         
         public decimal GetByPriceDashboard(DateTime btnDashboard, List<Gastos> gastos, int monthCount)
         {
-            return gastos.Where(item => item.Date.Year == btnDashboard.Year && item.Date.Month == monthCount).Sum(item => item.Gasto); ;
+            return gastos.Where(item => item.Date.Year == btnDashboard.Year && item.Date.Month == monthCount).Sum(item => item.Gasto);
         }
     }
 }

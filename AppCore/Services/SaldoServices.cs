@@ -18,12 +18,12 @@ namespace AppCore.Services
             this.saldo = saldo;
         }
 
-        public bool Add(Saldo t)
+        public bool Add(Resumen t)
         {
             return saldo.Add(t);
         }
 
-        public List<Saldo> FindAll()
+        public List<Resumen> FindAll()
         {
             return saldo.FindAll();
         }

@@ -22,7 +22,6 @@ namespace ProyectoFinal.Forms
         private IQueryGastosServices queryGastosServices;
 
         int year;
-
         public FrmDashBoard(ISaldoServices saldoServices, IGastosServices gastosServices, IIngresosServices ingresosServices, IQueryGastosServices queryGastosServices)
         {
             this.queryGastosServices = queryGastosServices;
@@ -30,49 +29,23 @@ namespace ProyectoFinal.Forms
             this.ingresos = ingresosServices;
             this.saldoServices = saldoServices;
             InitializeComponent();
-            cmbView.Items.AddRange(Enum.GetValues(typeof(From)).Cast<object>().ToArray());
         }
 
         private void FrmDashBoard_Load(object sender, EventArgs e)
         {
-            dtgvData.DataSource = saldoServices.FindAll();
+            dtgvData.DataSource = ingresos.FindAll();
             lblMovGasto.Text = gastosServices.FindAll().Count + "";
             lblMovIngreso.Text = ingresos.FindAll().Count + "";
             lblSaldomov.Text = saldoServices.FindAll().Count + "";
 
-            lblSaldoTotal.Text = (saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto)) +"";
-            lbltotalIngreso.Text = saldoServices.FindAll().Sum(item => item.Ingreso) + "";
-            lblTotalGasto.Text = saldoServices.FindAll().Sum(item => item.Gasto) + "";
+            lblSaldoTotal.Text = (ingresos.FindAll().Sum(item => item.Ingreso) - gastosServices.FindAll().Sum(item => item.Gasto)) + "";
+            lbltotalIngreso.Text = ingresos.FindAll().Sum(item => item.Ingreso) + "";
+            lblTotalGasto.Text = gastosServices.FindAll().Sum(item => item.Gasto) + "";
 
             lblYear.Text = DateTime.Now.Year + "";
             year = DateTime.Now.Year;
-
-
-
-        }
-
-        private void cmbView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbView.SelectedItem is From.Gastos)
-            {
-                // Example(chart);
-                //Example(chart, 1, year);
-
-            }
-            else if (cmbView.SelectedItem is From.Ingresos)
-            {
-               // Example1(chart);
-
-            }
-            else if (cmbView.SelectedItem is From.Saldo)
-            {
-             //   Example2(chart);
-
-            }
-            else
-            {
-
-            }
+            cmbView.Items.AddRange(Enum.GetValues(typeof(From)).Cast<object>().ToArray());
+            Example(ImageChart);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -87,7 +60,33 @@ namespace ProyectoFinal.Forms
             year--;
 
             lblYear.Text = $"{year}";
-            
+        }
+
+        public static void Example(Guna.Charts.WinForms.GunaChart chart)
+        {
+            string[] months = { "January", "February", "March", "April", "May", "June", "July" , "August", "September", "October", "November", "December"};
+
+            //Chart configuration 
+            chart.YAxes.GridLines.Display = false;
+
+            //Create a new dataset 
+            var dataset = new Guna.Charts.WinForms.GunaSplineDataset();
+            dataset.PointRadius = 3;
+            dataset.PointStyle = PointStyle.Circle;
+            var r = new Random();
+            for (int i = 0; i < months.Length; i++)
+            {
+                //random number
+                int num = r.Next(10, 100);
+
+                dataset.DataPoints.Add(months[i], num);
+            }
+
+            //Add a new dataset to a chart.Datasets
+            chart.Datasets.Add(dataset);
+
+            //An update was made to re-render the chart
+            chart.Update();
         }
     }
 }

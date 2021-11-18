@@ -51,6 +51,16 @@ namespace ProyectoFinal.Forms
         {
             try
             {
+                if (cmbCategoria.SelectedIndex < 1)
+                {
+                    throw new Exception("Selecciona la categoria");
+                }
+                
+                if (txtGasto.Text == string.Empty || txtName.Text == string.Empty)
+                {
+                    throw new Exception("Por favor rellene los campos necesarios");
+                }
+
                 Gastos g = new Gastos()
                 {
                     Name = txtName.Text,
@@ -64,10 +74,10 @@ namespace ProyectoFinal.Forms
 
                 gastosServices.Add(g);
 
-                Saldo saldo = new Saldo()
+                Resumen saldo = new Resumen()
                 {
                     Ingreso = 0,
-                    Gasto = g.Gasto,
+                    Gasto = gastosServices.FindAll()[gastosServices.FindAll().Count - 1].Gasto,
                     Total = ingresosServices.FindAll().Sum(item => item.Ingreso) - gastosServices.FindAll().Sum(item => item.Gasto),
                 };
 
@@ -77,8 +87,7 @@ namespace ProyectoFinal.Forms
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error, ingrese solo numeros", ex.Message);
+                MessageBox.Show(ex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

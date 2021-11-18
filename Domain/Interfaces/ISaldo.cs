@@ -9,8 +9,8 @@ namespace Domain.Interfaces
 {
     public interface ISaldo
     {
-        bool Add(Saldo t);
+        bool Add(Resumen t);
 
-        List<Saldo> FindAll();
+        List<Resumen> FindAll();
     }
 }

@@ -14,6 +14,6 @@ namespace AppCore.IServices
 
         List<T> FindAll();
 
-        bool Delete(T t);
+        bool Delete(int t);
     }
 }

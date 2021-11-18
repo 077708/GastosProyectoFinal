@@ -39,6 +39,12 @@
     <Reference Include="Autofac, Version=6.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.6.3.0\lib\netstandard2.0\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.Charts.WinForms, Version=1.1.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Charts.WinForms.1.1.5\lib\net40\Bunifu.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.Charts.WinForms.1.1.5\lib\net40\Bunifu.Licensing.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -107,6 +113,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FrmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDashBoard.Designer.cs">
+      <DependentUpon>FrmDashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmCalculadora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +130,6 @@
     </Compile>
     <Compile Include="Forms\FrmControlEvent.Designer.cs">
       <DependentUpon>FrmControlEvent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\FrmDashBoard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmDashBoard.Designer.cs">
-      <DependentUpon>FrmDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmGastos.cs">
       <SubType>Form</SubType>
@@ -155,11 +161,23 @@
     <Compile Include="Forms\FrmReportes.Designer.cs">
       <DependentUpon>FrmReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmSaldos.cs">
+    <Compile Include="Forms\FrmResumen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmSaldos.Designer.cs">
-      <DependentUpon>FrmSaldos.cs</DependentUpon>
+    <Compile Include="Forms\FrmResumen.Designer.cs">
+      <DependentUpon>FrmResumen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUpdateByIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUpdateByIngreso.Designer.cs">
+      <DependentUpon>frmUpdateByIngreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUpdateGasto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUpdateGasto.Designer.cs">
+      <DependentUpon>FrmUpdateGasto.cs</DependentUpon>
     </Compile>
     <Compile Include="Logica\ConexionDB.cs" />
     <Compile Include="Logica\GastoR.cs" />
@@ -203,8 +221,14 @@
     <EmbeddedResource Include="Forms\FrmReportes.resx">
       <DependentUpon>FrmReportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmSaldos.resx">
-      <DependentUpon>FrmSaldos.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmResumen.resx">
+      <DependentUpon>FrmResumen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUpdateByIngreso.resx">
+      <DependentUpon>frmUpdateByIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUpdateGasto.resx">
+      <DependentUpon>FrmUpdateGasto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

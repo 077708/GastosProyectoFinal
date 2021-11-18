@@ -1,6 +1,7 @@
 ﻿using AppCore.IServices;
 using Domain.Entities;
 using Domain.Enums;
+using ProyectoFinal.UsersC;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,39 +46,58 @@ namespace ProyectoFinal.Forms
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Ingresos ingreso = new Ingresos()
+            try
             {
-                Name = txtName.Text,
-                Description = txtDescription.Text,
-                Ingreso = decimal.Parse(txtIngreso.Text),
-                CategoryExpense = (CategoriaIngresos)cmbCategoria.SelectedItem,
-            };
+                if (cmbCategoria.SelectedIndex < 0)
+                {
+                    throw new Exception("Selecciona la categoria");
+                }
 
-            ingresosServices.Add(ingreso);
+                if (txtIngreso.Text == string.Empty || txtName.Text == string.Empty)
+                {
+                    throw new Exception("Por favor rellene los campos necesarios");
+                }
 
-            Saldo saldo = new Saldo()
-            {
-                Ingreso = ingreso.Ingreso,
-                Gasto = 0,
-                //Total = saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto),
-            };
+                Ingresos ingreso = new Ingresos()
+                {
+                    Name = txtName.Text,
+                    Description = txtDescription.Text,
+                   /// Date = new DateTime(2021, int.Parse(UserControlDays.static_day), int.Parse(FrmIngresos.static_Mes)),
+                    Ingreso = decimal.Parse(txtIngreso.Text),
+                    CategoryExpense = (CategoriaIngresos)cmbCategoria.SelectedItem,
+                };
 
-            if (ingresosServices.FindAll().Count == 1)
-            {
-                saldo.Total = ingreso.Ingreso;
+                ingresosServices.Add(ingreso);
+
+                Resumen saldo = new Resumen()
+                {
+                    Ingreso = ingresosServices.FindAll()[ingresosServices.FindAll().Count - 1].Ingreso,
+                    Gasto = 0,
+                    //Total = saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto),
+                };
+
+                if (ingresosServices.FindAll().Count == 1)
+                {
+                    saldo.Total = ingreso.Ingreso;
+                }
+                else
+                {
+                    saldo.Total = saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto)
+                       + ingresosServices.FindAll()[0].Ingreso;
+                }
+
+                saldoServices.Add(saldo);
             }
-            else
+            catch (Exception ex)
             {
-                saldo.Total = saldoServices.FindAll().Sum(item => item.Ingreso) - saldoServices.FindAll().Sum(item => item.Gasto)
-                   + ingresosServices.FindAll()[0].Ingreso;
+                MessageBox.Show(ex.Message, "Mensaje de error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            saldoServices.Add(saldo);
         }
 
         private void FrmControlEvent_Load(object sender, EventArgs e)
         {
             cmbCategoria.Items.AddRange(Enum.GetValues(typeof(CategoriaIngresos)).Cast<Object>().ToArray());
+            lblSelectedDate.Text = UserControlDays.static_day +" "+ FrmIngresos.static_Mes;
         }
     }
 }

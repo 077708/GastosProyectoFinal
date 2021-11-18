@@ -122,7 +122,7 @@ namespace ProyectoFinal.Forms
 
         private void btnSaldo_Click(object sender, EventArgs e)
         {
-            FrmSaldos frmSaldos = new FrmSaldos(this.ingresos, this.gastosServices, this.SaldoServices);
+            FrmResumen frmSaldos = new FrmResumen(this.ingresos, this.gastosServices, this.SaldoServices);
             AbrirFormEnPanel(frmSaldos);
         }
 
@@ -151,6 +151,12 @@ namespace ProyectoFinal.Forms
             {
                 pictureBox.ImageLocation = fd.FileName;
             }
+        }
+
+        private void FrmPresentation_Load(object sender, EventArgs e)
+        {
+            FrmDashBoard frmDashBoard = new FrmDashBoard(this.SaldoServices, this.gastosServices, this.ingresos, this.queryGastosServices);
+            AbrirFormEnPanel(frmDashBoard);
         }
     }
 }

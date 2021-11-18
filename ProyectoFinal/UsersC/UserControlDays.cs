@@ -16,6 +16,7 @@ namespace ProyectoFinal.UsersC
     {
         private IIngresosServices ingreso;
         private ISaldoServices SaldoServices;
+        public static string static_day;
 
         public UserControlDays(IIngresosServices ingreso, ISaldoServices SaldoServices)
         {
@@ -31,8 +32,9 @@ namespace ProyectoFinal.UsersC
 
         private void UserControlDays_Click(object sender, EventArgs e)
         {
+            static_day = lblDays.Text;
             FrmControlEvent frmControlEvent = new FrmControlEvent(this.ingreso, this.SaldoServices);
-            frmControlEvent.Show();
+            frmControlEvent.ShowDialog();
         }
     }
 }

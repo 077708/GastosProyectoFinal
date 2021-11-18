@@ -14,6 +14,6 @@ namespace Domain.Interfaces
 
         List<T> FindAll();
 
-        bool Delete(T t);
+        bool Delete(int t);
     }
 }

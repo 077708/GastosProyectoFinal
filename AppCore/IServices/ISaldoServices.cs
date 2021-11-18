@@ -9,8 +9,8 @@ namespace AppCore.IServices
 {
     public interface ISaldoServices
     {
-        bool Add(Saldo t);
+        bool Add(Resumen t);
 
-        List<Saldo> FindAll();
+        List<Resumen> FindAll();
     }
 }

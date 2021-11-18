@@ -47,10 +47,36 @@ namespace ProyectoFinal.Logica
             }
         }
 
-        public bool Delete(Gastos t)
+        public bool Delete(int t)
         {
-            throw new NotImplementedException();
+            bool respuesta = true;
+
+            using (SQLiteConnection conexion = new SQLiteConnection(ConexionDB.cadena))
+            {
+                //Abrimos conexion
+                conexion.Open();
+                //Hacemos una consulta de insert a la tabla personas
+                string query = "delete from TBGastos  where Id = @id";
+
+                //Luego de eso tenemos que agregarle datos con sqliteCOmmand
+                //Este recibe una consulta y una conexion
+                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                cmd.Parameters.Add(new SQLiteParameter("@id", t));
+
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                if (cmd.ExecuteNonQuery() < 1)
+                {
+                    respuesta = false;
+                }
+
+                conexion.Close();
+
+                return respuesta;
+            }
         }
+    
 
         public List<Gastos> FindAll()
         {
@@ -93,7 +119,37 @@ namespace ProyectoFinal.Logica
 
         public bool Update(Gastos t)
         {
-            throw new NotImplementedException();
+            bool respuesta = true;
+
+            using (SQLiteConnection conexion = new SQLiteConnection(ConexionDB.cadena))
+            {
+                //Abrimos conexion
+                conexion.Open();
+                //Hacemos una consulta de insert a la tabla personas
+                string query = "Update TBGastos set Name = @name, Description = @description, Fecha = @fecha, Gasto = @gasto, Categoria = @categoria where Id = @id";
+
+                //Luego de eso tenemos que agregarle datos con sqliteCOmmand
+                //Este recibe una consulta y una conexion
+                SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+
+                cmd.Parameters.Add(new SQLiteParameter("@id", t.Id));
+                cmd.Parameters.Add(new SQLiteParameter("@name", t.Name));
+                cmd.Parameters.Add(new SQLiteParameter("@description", t.Description));
+                cmd.Parameters.Add(new SQLiteParameter("@fecha", t.Date));
+                cmd.Parameters.Add(new SQLiteParameter("@gasto", t.Gasto));
+                cmd.Parameters.Add(new SQLiteParameter("@categoria", (CategoriaGastos)t.CategoryExpense));
+
+                cmd.CommandType = System.Data.CommandType.Text;
+
+                if (cmd.ExecuteNonQuery() < 1)
+                {
+                    respuesta = false;
+                }
+
+                conexion.Close();
+
+                return respuesta;
+            }
         }
     }
 }

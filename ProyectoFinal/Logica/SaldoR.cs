@@ -11,7 +11,7 @@ namespace ProyectoFinal.Logica
 {
     public class SaldoR : ConexionDB, ISaldo
     {
-        public bool Add(Saldo t)
+        public bool Add(Resumen t)
         {
             bool respuesta = true;
 
@@ -39,9 +39,9 @@ namespace ProyectoFinal.Logica
             return respuesta;
         }
 
-        public List<Saldo> FindAll()
+        public List<Resumen> FindAll()
         {
-            List<Saldo> saldos = new List<Saldo>();
+            List<Resumen> saldos = new List<Resumen>();
 
             using (SQLiteConnection conexion = new SQLiteConnection(cadena))
             {
@@ -56,7 +56,7 @@ namespace ProyectoFinal.Logica
                 {
                     while (dr.Read())
                     {
-                        saldos.Add(new Saldo()
+                        saldos.Add(new Resumen()
                         {
                             Id = int.Parse(dr["Id"].ToString()),
                             Ingreso = decimal.Parse(dr["Ingreso"].ToString()),

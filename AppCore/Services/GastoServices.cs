@@ -23,9 +23,9 @@ namespace AppCore.Services
             return gastos.Add(t);
         }
 
-        public bool Delete(Gastos t)
+        public bool Delete(int t)
         {
-            throw new NotImplementedException();
+            return gastos.Delete(t);
         }
 
         public List<Gastos> FindAll()

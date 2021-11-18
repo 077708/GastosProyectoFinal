@@ -23,7 +23,7 @@ namespace AppCore.Services
             return ingresos.Add(t);
         }
 
-        public bool Delete(Ingresos t)
+        public bool Delete(int t)
         {
             return ingresos.Delete(t);
         }

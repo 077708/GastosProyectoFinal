@@ -10,6 +10,6 @@ namespace Domain.Enums
     {
         Ingresos,
         Gastos,
-        Saldo
+        History
     }
 }
